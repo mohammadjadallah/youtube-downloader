@@ -28,13 +28,13 @@ def infoVideo():
 
 
     Title = Label(root, text=' title: ' + tit, font=('PGothic', 18, 'bold'), fg='#c9c5c0', bg='#462c5a')
-    Title.place(x=83, y=400)
+    Title.place(x=83, y=420)
     views = Label(root, text=' views: ' + str(vi), font=('PGothic', 18, 'bold'), fg='#c9c5c0', bg='#462c5a')
-    views.place(x=83, y=430)
+    views.place(x=83, y=450)
     length = Label(root, text=' length: ' + str(Len) + ' sec', font=('PGothic', 18, 'bold'), fg='#c9c5c0', bg='#462c5a')
-    length.place(x=83, y=460)
+    length.place(x=83, y=480)
     rate = Label(root, text=' rating: ' + str(rt), font=('PGothic', 18, 'bold'), fg='#c9c5c0', bg='#462c5a')
-    rate.place(x=83, y=490)
+    rate.place(x=83, y=510)
 
 # and this function to check if the quality equivalent what the user choose
 
@@ -75,26 +75,26 @@ usercheck = False
 label = Label(root,
               text='DevTube الآن يمكنك تنزيل وحفظ الفيديوهات وبأعلى جودة مع ',
               font=('PGothic', 23, 'bold'), fg='#c9c5c0', bg='#462c5a')
-label.place(x=83, y=150)
+label.place(x=83, y=100)
 
 # make entry until the user input the link
 
 entry = Entry(root, bg='#2c2f30', font=('normal', 18), fg='#c9c5c0', relief=FLAT, textvariable=STR)
-entry.place(width=665, height=70, x=85, y=210)
+entry.place(width=665, height=70, x=85, y=160)
 entry.insert(0, '                          أدخـــــــــــل    الــــــرابــــط')
 
 # make button when user press it the video will download
 
 btn = Button(root, text='تنزيل', font=('normal', 30), bg='#d1480d', fg='#c9c5c0', relief=FLAT)
-btn.place(width=100, height=60, x=648, y=215)
+btn.place(width=100, height=60, x=648, y=165)
 
 btn2 = Button(root, text='عرض معلومات الفيديو', font=('normal', 18), bg='#d1480d', fg='#c9c5c0', relief=FLAT)
-btn2.place(width=190, height=60, x=555, y=390)
+btn2.place(width=190, height=60, x=555, y=340)
 
 typeOfQuality = ttk.Combobox(root, font=('normal', 20), values=('1080p', '720p',
                                                                     '480p', '360p',
                                                                     'get audio only'))
-typeOfQuality.place(width=660, height=60, x=85, y=300)
+typeOfQuality.place(width=660, height=60, x=85, y=250)
 
 btn.configure(command=lambda: root.after(2000, choose))
 btn2.configure(command=lambda: root.after(2000, infoVideo))
